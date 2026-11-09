@@ -1,0 +1,262 @@
+
+/* =========================
+   1. COLOR PALETTE
+========================= */
+
+:root {
+    --purple: #8E7AB5;
+    --pink: #E6A4B4;
+    --cream: #FFF8F0;
+    --dark: #333333;
+    --white: #FFFFFF;
+}
+
+
+/* =========================
+   2. GENERAL STYLING
+========================= */
+
+/* Removes default browser spacing */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles the entire website */
+
+body {
+    background-color: var(--cream);
+    color: var(--dark);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.6;
+}
+
+/* Styles all headings */
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* =========================
+   3. NAVIGATION BAR
+========================= */
+
+header {
+    background-color: var(--white);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 8%;
+}
+
+.logo {
+    color: var(--purple);
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: var(--pink);
+}
+
+
+/* =========================
+   4. HOME PAGE
+========================= */
+
+#hero {
+    background-color: var(--purple);
+    color: var(--white);
+
+    text-align: center;
+
+    padding: 96px 24px;
+}
+
+#hero h1 {
+    font-size: 40px;
+    margin-bottom: 24px;
+}
+
+#hero p {
+    margin-bottom: 24px;
+}
+
+
+/* =========================
+   5. BUTTON
+========================= */
+
+.button {
+    display: inline-block;
+
+    background-color: var(--pink);
+    color: var(--dark);
+
+    padding: 12px 24px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: var(--white);
+}
+
+
+/* =========================
+   6. THREE COLUMN SECTION
+========================= */
+
+.features {
+    padding: 64px 8%;
+    text-align: center;
+}
+
+.features h2 {
+    color: var(--purple);
+    margin-bottom: 32px;
+}
+
+/* Flexbox creates the columns */
+
+.feature-container {
+    display: flex;
+    gap: 24px;
+}
+
+.feature-card {
+    background-color: var(--white);
+
+    padding: 32px 24px;
+
+    border-radius: 8px;
+
+    flex: 1;
+}
+
+.feature-card h3 {
+    color: var(--purple);
+    margin-bottom: 16px;
+}
+
+
+/* =========================
+   7. ABOUT PAGE
+========================= */
+
+.about-section {
+    text-align: center;
+
+    padding: 96px 24px;
+
+    min-height: 70vh;
+}
+
+.about-section h1 {
+    color: var(--purple);
+    font-size: 40px;
+    margin-bottom: 24px;
+}
+
+.about-section p {
+    margin-bottom: 24px;
+}
+
+
+/* =========================
+   8. FOOTER
+========================= */
+
+footer {
+    background-color: var(--purple);
+    color: var(--white);
+
+    text-align: center;
+
+    padding: 24px;
+}
+
+
+/* =========================
+   9. TABLET SCREEN
+   768px and below
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        padding: 24px;
+    }
+
+    #hero {
+        padding: 64px 24px;
+    }
+
+    #hero h1 {
+        font-size: 32px;
+    }
+
+    .feature-container {
+        flex-wrap: wrap;
+    }
+
+    .feature-card {
+        flex: 1 1 45%;
+    }
+
+}
+
+
+/* =========================
+   10. MOBILE SCREEN
+   480px and below
+========================= */
+
+@media screen and (max-width: 480px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .nav-links {
+        gap: 24px;
+    }
+
+    #hero h1 {
+        font-size: 28px;
+    }
+
+    .features {
+        padding: 48px 24px;
+    }
+
+    .feature-container {
+        flex-direction: column;
+    }
+
+    .feature-card {
+        width: 100%;
+    }
+
+}
